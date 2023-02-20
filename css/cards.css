@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color:rgb(34,34,34);
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-row-gap: 10px
+}
+:root{
+    --minColor:rgb(132, 0, 255)
+}
+#cruds{
+    padding: 8%;
+
+}
+#head{
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin: 20px;
+}
+#input{
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 2fr 1fr 
+    }
+.input input[type='text'],input[type='search']{
+    width: 100%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.486);
+    color:white;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    padding: 0px 10px;
+    border-radius: 10px
+}
+.price{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 0.5fr 1fr;
+}
+.price input[type='number']{
+    width: 98%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.486);
+    color:white;
+    border: none;
+    outline: none;
+    margin: 10px 2px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+#total{
+    margin: 13px 15px;
+    width: 50px;
+    height: 27px;
+    display: inline-block;
+    padding: 5px;    
+    background-color: var(--minColor);
+    border-radius:10px 0px 0px 10px;
+    margin-right: 0;
+    border: 1px solid var(--minColor);
+    color: white
+}
+#total-v{
+    width: 70px;
+    height: 27px;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid var(--minColor);
+     display: inline-block;
+    /* display: none; */
+    margin-top: 13px;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+}
+ input[type='button'] {
+    width: 100%;
+    height: 33px;
+    background-color:var(--minColor) ;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin: 5px 0;
+    color: white;
+    padding: 0px 10px
+    }
+ input[type='button']:hover{
+    transform: scale(.96)
+}  
+.but-s{
+    display: grid;
+    grid-template-columns: repeat(2,1fr)
+}
+.input input[type='text']:focus,input[type="number" ]:focus,input[type='search']:focus ,.input input[type='text']:hover , input[type='number']:hover,input[type='search']:hover{
+    transform: scale(1.01,1.1);
+    border-bottom: 2px solid var(--minColor);  
+    background-color: black
+}
+/* ----output----- */
+ #output{
+    padding:0% 8%;
+    max-width: 100%;
+}
+#output::before{
+    content: "";
+    width: 845px;
+    background-color: brown;
+    height: 2px;
+    display: inline-block;
+    margin-left: 0px;
+    position: relative;
+}
+th,td{
+    width: 100%;
+    height: 100%;
+    padding:5px 11px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase; 
+    word-wrap: break-word;
+} 
+td{
+    text-transform: lowercase;
+    font-size: 15px;
+    color: rgb(219, 218, 218)
+}
+    
+th{
+    background-color: var(--minColor);
+    border-bottom: 2px solid brown
+}
+
+#settings{ 
+  color: var(--minColor);
+position: absolute;
+width: 35px;
+height: 0;
+top: 10px;
+right: 10px;
+text-align: center;
+transition: .5s;
+
+}
+#settings i{
+    /* height: 100px; */
+    width: 30px;
+    transition: .5s;
+   
+
+}
+#settings:hover ,#settings i:hover #settings:active ,#settings i:active .settings{
+      border-radius: 20px;
+        
+
+    width: 35px;
+    height: 150px;
+border: 2px solid var(--minColor);
+background-color: azure;
+
+}
+#settings:hover >i{
+    width: 100%;
+    transform: rotate(180deg);
+color: rgb(255, 255, 255);
+background-color:var(--minColor);
+border-radius: 0px 0px 20px 20px;
+
+}
+#set-element{
+    display: grid;
+    grid-template-rows: repeat(3,30px);
+    text-align: center;
+
+}
+    
+#set-element i{
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+        transition: .2s;
+        transition-delay: .1s;
+        position: relative;
+        top: -5px;
+        color: black;
+       
+
+}
+#settings:hover #set-element i{
+    opacity:1;
+    visibility: visible;
+    top: 5px;
+    
+}
+#set-element i:hover{
+    color: var(--minColor);
+    box-shadow: 0px 0px 1px 2px rgb(223, 123, 223) outset ,5px 5px .9 10px rgb(255, 255, 255);
+
+        
+}#set-element i:active span{
+    display: inline-block;
+ width: 100px;
+height: 20px;
+        border-radius: 20px;
+background-color: aqua;
+}
+#prg{
+    margin-top:-5px;
+    color: rgb(64, 253, 7);
+}
